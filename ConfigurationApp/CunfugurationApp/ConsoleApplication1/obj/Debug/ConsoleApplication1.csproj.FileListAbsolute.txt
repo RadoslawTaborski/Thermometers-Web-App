@@ -1,0 +1,5 @@
+C:\Users\Adam\Desktop\Inzynier\ConfigurationApp\CunfugurationApp\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Adam\Desktop\Inzynier\ConfigurationApp\CunfugurationApp\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Adam\Desktop\Inzynier\ConfigurationApp\CunfugurationApp\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Adam\Desktop\Inzynier\ConfigurationApp\CunfugurationApp\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Adam\Desktop\Inzynier\ConfigurationApp\CunfugurationApp\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

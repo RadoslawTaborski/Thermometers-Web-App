@@ -1,0 +1,6 @@
+D:\PWr\Semestr_VII\Projekt specjalnościowy\dataExp\dataExp\bin\Debug\dataExp.exe.config
+D:\PWr\Semestr_VII\Projekt specjalnościowy\dataExp\dataExp\bin\Debug\dataExp.exe
+D:\PWr\Semestr_VII\Projekt specjalnościowy\dataExp\dataExp\bin\Debug\dataExp.pdb
+D:\PWr\Semestr_VII\Projekt specjalnościowy\dataExp\dataExp\bin\Debug\MySql.Data.dll
+D:\PWr\Semestr_VII\Projekt specjalnościowy\dataExp\dataExp\obj\Debug\dataExp.exe
+D:\PWr\Semestr_VII\Projekt specjalnościowy\dataExp\dataExp\obj\Debug\dataExp.pdb

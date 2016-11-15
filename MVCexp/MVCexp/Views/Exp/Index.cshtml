@@ -1,0 +1,36 @@
+﻿@model MVCexp.Models.StudentModel
+@{
+    ViewBag.Title = "How To Dynamically Add Rows To A Table In MVC3 ";
+}
+
+<script language="javascript">
+    function ValidateData() {
+        return true;
+    }
+</script>
+
+@using (Html.BeginForm("Index", "Exp"))
+{
+    <table width="80" cellpadding="3" cellspacing="0" border="1" style="border-color:Black;border-collapse:collapse;">
+        <tr style="font-weight:bold;background-color:Gray;height:20px;">
+            <td>RollNo</td>
+            <td>Name</td>
+            <td>Marks</td>
+            <td>Address</td>
+        </tr>
+        @for (int i = 0; i < Model.DetailModel.Count; i++)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m => m.DetailModel[i].RollNo, new { @class = "validateClassRollNo" })</td>
+                <td>@Html.DisplayFor(m => m.DetailModel[i].Name, new { @class = "validateClassName" })</td>
+                <td>@Html.DisplayFor(m => m.DetailModel[i].Marks, new { @class = "validateClassMarks" })</td>
+                <td>@Html.DisplayFor(m => m.DetailModel[i].Address, new { @class = "validateClassAddress" })</td>
+            </tr>
+        }
+        <tr>
+            <td colspan="4">
+                <input type="submit" value="Add New Record" title="Add New Record" onclick="javascript:return ValidateData();" />
+            </td>
+        </tr>
+    </table>
+}

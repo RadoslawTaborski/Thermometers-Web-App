@@ -1,0 +1,14 @@
+C:\Users\Adam\Desktop\Inzynier\ConfigurationApp\CunfugurationApp\CunfugurationApp\bin\Debug\ConfigurationApp.exe.config
+C:\Users\Adam\Desktop\Inzynier\ConfigurationApp\CunfugurationApp\CunfugurationApp\bin\Debug\ConfigurationApp.exe
+C:\Users\Adam\Desktop\Inzynier\ConfigurationApp\CunfugurationApp\CunfugurationApp\bin\Debug\ConfigurationApp.pdb
+C:\Users\Adam\Desktop\Inzynier\ConfigurationApp\CunfugurationApp\CunfugurationApp\obj\Debug\ConfigurationApp.exe
+C:\Users\Adam\Desktop\Inzynier\ConfigurationApp\CunfugurationApp\CunfugurationApp\obj\Debug\ConfigurationApp.pdb
+C:\Users\Adam\Desktop\Inzynier\ConfigurationApp\CunfugurationApp\CunfugurationApp\obj\Debug\ConfigurationApp.csprojResolveAssemblyReference.cache
+C:\Users\Adam\Desktop\Inzynier\ConfigurationApp\CunfugurationApp\CunfugurationApp\bin\Debug\MySql.Data.dll
+D:\PWr\Semestr_VII\Projekt specjalnościowy\ConfigurationApp\CunfugurationApp\CunfugurationApp\bin\Debug\ConfigurationApp.exe.config
+D:\PWr\Semestr_VII\Projekt specjalnościowy\ConfigurationApp\CunfugurationApp\CunfugurationApp\obj\Debug\ConfigurationApp.exe
+D:\PWr\Semestr_VII\Projekt specjalnościowy\ConfigurationApp\CunfugurationApp\CunfugurationApp\obj\Debug\ConfigurationApp.pdb
+D:\PWr\Semestr_VII\Projekt specjalnościowy\ConfigurationApp\CunfugurationApp\CunfugurationApp\bin\Debug\ConfigurationApp.exe
+D:\PWr\Semestr_VII\Projekt specjalnościowy\ConfigurationApp\CunfugurationApp\CunfugurationApp\bin\Debug\ConfigurationApp.pdb
+D:\PWr\Semestr_VII\Projekt specjalnościowy\ConfigurationApp\CunfugurationApp\CunfugurationApp\bin\Debug\MySql.Data.dll
+D:\PWr\Semestr_VII\Projekt specjalnościowy\ConfigurationApp\CunfugurationApp\CunfugurationApp\obj\Debug\ConfigurationApp.csprojResolveAssemblyReference.cache

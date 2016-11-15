@@ -1,0 +1,44 @@
+﻿@model IEnumerable<WebApp.Models.Sensor>
+@{
+    ViewBag.Title = "Index";
+    var list = Model.ToArray();
+}
+
+<head>
+    <meta http-equiv="Refresh" content="20" />
+</head>
+
+<div class="jumbotron">
+    <h1>Aktualne temperatury</h1>
+    <p class="lead">Spis ostatnio zmierzonych temperatur</p>
+</div>
+
+<div class="row">
+    @for (var i = 0; i < list.Count(); ++i)
+    {
+        if (i % 3 == 0)
+        {
+            <div class="text-left col-md-4">
+                <h2>@Html.DisplayFor(modelItem => list[i].Name)</h2>
+                <h2>@Html.DisplayFor(modelItem => list[i].Measurment.Temperature) <sup>o</sup>C </h2>
+                <p>@Html.DisplayFor(modelItem => list[i].Measurment.Date)</p>
+            </div>
+        }
+        if (i % 3 == 1)
+        {
+            <div class="text-center col-md-4">
+                <h2>@Html.DisplayFor(modelItem => list[i].Name)</h2>
+                <h2>@Html.DisplayFor(modelItem => list[i].Measurment.Temperature) <sup>o</sup>C </h2>
+                <p>@Html.DisplayFor(modelItem => list[i].Measurment.Date)</p>
+            </div>
+        }
+        if (i % 3 == 2)
+        {
+            <div class="text-right col-md-4">
+                <h2>@Html.DisplayFor(modelItem => list[i].Name)</h2>
+                <h2>@Html.DisplayFor(modelItem => list[i].Measurment.Temperature) <sup>o</sup>C </h2>
+                <p>@Html.DisplayFor(modelItem => list[i].Measurment.Date)</p>
+            </div>
+        }
+    }
+</div>
