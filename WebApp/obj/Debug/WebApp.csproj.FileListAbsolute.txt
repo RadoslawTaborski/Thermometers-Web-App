@@ -1,0 +1,14 @@
+C:\Users\rados\Desktop\HighlightsChartSample\bin\DotNet.Highcharts.dll
+C:\Users\rados\Desktop\HighlightsChartSample\bin\MySql.Data.dll
+C:\Users\rados\Desktop\HighlightsChartSample\bin\System.Net.Http.Formatting.dll
+C:\Users\rados\Desktop\HighlightsChartSample\bin\System.Web.Http.dll
+C:\Users\rados\Desktop\HighlightsChartSample\bin\System.Web.Http.WebHost.dll
+C:\Users\rados\Desktop\HighlightsChartSample\bin\System.Net.Http.Formatting.xml
+C:\Users\rados\Desktop\HighlightsChartSample\bin\System.Web.Http.xml
+C:\Users\rados\Desktop\HighlightsChartSample\bin\System.Web.Http.WebHost.xml
+C:\Users\rados\Desktop\HighlightsChartSample\bin\WebApp.dll.config
+C:\Users\rados\Desktop\HighlightsChartSample\bin\WebApp.dll
+C:\Users\rados\Desktop\HighlightsChartSample\bin\WebApp.pdb
+C:\Users\rados\Desktop\HighlightsChartSample\obj\Debug\WebApp.dll
+C:\Users\rados\Desktop\HighlightsChartSample\obj\Debug\WebApp.pdb
+C:\Users\rados\Desktop\HighlightsChartSample\obj\Debug\WebApp.csprojResolveAssemblyReference.cache

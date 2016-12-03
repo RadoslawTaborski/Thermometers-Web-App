@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div class="jumbotron">
+    <h1>Historia pomiarów</h1>
+    <p class="lead">Spis pomiarów konkretnego czujnika</p>
+</div>
+
+
+@model WebApp.Models.SensorHistory
+
+@Html.DropDownList("List", null, "wybierz czujnik", new { @onchange = "document.location.href='/History/Index?value='+this.value;" })
+
+@(Model.Chart)
+
+<table id="aliasTable" class="table text-left" width="250">
+    <tr>
+        <th width="100">Data</th>
+        <th width="100">Pomiar</th>
+    </tr>
+    @for (int i = Model.Measurments.Count - 1; i >= 0; --i)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m => m.Measurments[i].Date)</td>
+            <td>@Html.DisplayFor(m => m.Measurments[i].Temperature) <sup>o</sup>C</td>
+        </tr>
+    }
+</table>
+

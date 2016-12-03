@@ -38,6 +38,7 @@ D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\WebApp\bin\Microsoft.Owin.Sec
 D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\WebApp\bin\Microsoft.Owin.Security.OAuth.dll
 D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\WebApp\bin\Microsoft.Owin.Security.Twitter.dll
 D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\WebApp\bin\Microsoft.Web.Infrastructure.dll
+D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\WebApp\bin\MySql.Data.dll
 D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\WebApp\bin\Newtonsoft.Json.dll
 D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\WebApp\bin\Owin.dll
 D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\WebApp\bin\System.Web.Helpers.dll
@@ -80,4 +81,3 @@ D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\WebApp\bin\Microsoft.Owin.Sec
 D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\WebApp\obj\Release\WebApp.csprojResolveAssemblyReference.cache
 D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\WebApp\obj\Release\WebApp.dll
 D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\WebApp\obj\Release\WebApp.pdb
-D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\WebApp\bin\MySql.Data.dll
