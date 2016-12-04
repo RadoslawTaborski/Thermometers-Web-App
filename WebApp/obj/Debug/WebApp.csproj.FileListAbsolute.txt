@@ -12,3 +12,17 @@ C:\Users\rados\Desktop\HighlightsChartSample\bin\WebApp.pdb
 C:\Users\rados\Desktop\HighlightsChartSample\obj\Debug\WebApp.dll
 C:\Users\rados\Desktop\HighlightsChartSample\obj\Debug\WebApp.pdb
 C:\Users\rados\Desktop\HighlightsChartSample\obj\Debug\WebApp.csprojResolveAssemblyReference.cache
+D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\bin\WebApp.dll.config
+D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\bin\WebApp.dll
+D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\bin\WebApp.pdb
+D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\bin\DotNet.Highcharts.dll
+D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\bin\MySql.Data.dll
+D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\bin\System.Net.Http.Formatting.dll
+D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\bin\System.Web.Http.dll
+D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\bin\System.Web.Http.WebHost.dll
+D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\bin\System.Net.Http.Formatting.xml
+D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\bin\System.Web.Http.xml
+D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\bin\System.Web.Http.WebHost.xml
+D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\obj\Debug\WebApp.csprojResolveAssemblyReference.cache
+D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\obj\Debug\WebApp.dll
+D:\PWr\Semestr_VII\Projekt specjalnościowy\WebApp\obj\Debug\WebApp.pdb

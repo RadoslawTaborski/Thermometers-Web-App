@@ -17,28 +17,32 @@ namespace WebApp.Controllers
     {
         private static List<Models.SensorHistory> sensorsList;
         // GET: History
-        public ActionResult Index(int? value)
+        public ActionResult Index(int? value, String date)
         {
             if (value != null)
             {
                 ViewBag.List = new SelectList(sensorsList, "Id", "Name", value);
-
-                var xData = sensorsList[(value - 1).Value].Measurments.Select(i => i.Date.ToString()).ToArray();
-                var yData = sensorsList[(value - 1).Value].Measurments.Select(i => new object[] { i.Temperature }).ToArray();
-
-                var data = new object[sensorsList[(value - 1).Value].Measurments.Count, 2];
-                for (var i = 0; i < sensorsList[(value - 1).Value].Measurments.Count; ++i)
+                var DaysString = new List<String>();
+                foreach (var item in sensorsList[(value - 1).Value].Days)
                 {
-                    data[i, 0] = sensorsList[(value - 1).Value].Measurments[i].Date;
-                    data[i, 1]= sensorsList[(value - 1).Value].Measurments[i].Temperature;
+                    DaysString.Add(item.ToShortDateString());
                 }
+                ViewBag.Day = new SelectList(DaysString,date);
+                if (date == "")
+                {
+                    var tmp=sensorsList[(value - 1).Value].Data = sensorsList[(value - 1).Value].Measurments;
+                    var data = new object[tmp.Count(), 2];
+                    for (var i = 0; i < tmp.Count(); ++i)
+                    {
+                        data[i, 0] = tmp.ElementAt(i).Date;
+                        data[i, 1] = tmp.ElementAt(i).Temperature;
+                    }
 
-                //instanciate an object of the Highcharts type
-                sensorsList[(value - 1).Value].Chart = new Highcharts("chart")
+                    sensorsList[(value - 1).Value].Chart = new Highcharts("chart")
                     .InitChart(new Chart { DefaultSeriesType = ChartTypes.Spline })
                     .SetOptions(new GlobalOptions { Global = new Global { UseUTC = false } })
                     .SetTitle(new Title { Text = "Wykres" })
-                    .SetSubtitle(new Subtitle { Text = data[0,0].ToString()+"-"+data[sensorsList[(value - 1).Value].Measurments.Count-1,0].ToString() })
+                    .SetSubtitle(new Subtitle { Text = tmp.First().Date.ToShortDateString() + "-" + tmp.Last().Date.ToShortDateString() })
                     .SetXAxis(new XAxis
                     {
                         Type = AxisTypes.Datetime,
@@ -51,8 +55,42 @@ namespace WebApp.Controllers
                         Min = 15
                     })
                     .SetTooltip(new Tooltip { Formatter = "function() { return '<b>'+ this.series.name +'</b><br/>'+ Highcharts.dateFormat('%e. %b', this.x) +': '+ this.y +' m'; }" })
-                    .SetSeries(new Series { Name=sensorsList[(value-1).Value].Name, Data=new Data(data)});
+                    .SetSeries(new Series { Name = sensorsList[(value - 1).Value].Name, Data = new Data(data) });
+                }
+                else
+                {
+                    DateTime date2;
+                    if (DateTime.TryParseExact(date, "dd'.'MM'.'yyyy", null, System.Globalization.DateTimeStyles.None, out date2))
+                    {
+                        var tmp=sensorsList[(value - 1).Value].Data = sensorsList[(value - 1).Value].Measurments.Where(p=> sensorsList[(value - 1).Value].Measurments.Any(i => i.Date.Date == date2.Date));
 
+                        var data = new object[tmp.Count(), 2];
+                        for (var i = 0; i < tmp.Count(); ++i)
+                        {
+                            data[i, 0] = tmp.ElementAt(i).Date;
+                            data[i, 1] = tmp.ElementAt(i).Temperature;
+                        }
+
+                        sensorsList[(value - 1).Value].Chart = new Highcharts("chart")
+                        .InitChart(new Chart { DefaultSeriesType = ChartTypes.Spline })
+                        .SetOptions(new GlobalOptions { Global = new Global { UseUTC = false } })
+                        .SetTitle(new Title { Text = "Wykres" })
+                        .SetSubtitle(new Subtitle { Text = date2.ToShortDateString() })
+                        .SetXAxis(new XAxis
+                        {
+                            Type = AxisTypes.Datetime,
+                            DateTimeLabelFormats = new DateTimeLabel { Month = "%e. %b", Year = "%b" },
+                            Title = new XAxisTitle { Text = "Godzina" },
+                        })
+                        .SetYAxis(new YAxis
+                        {
+                            Title = new YAxisTitle { Text = "Temperatura [*C]" },
+                            Min = 15
+                        })
+                        .SetTooltip(new Tooltip { Formatter = "function() { return '<b>'+ this.series.name +'</b><br/>'+ Highcharts.dateFormat('%e. %b', this.x) +': '+ this.y +' m'; }" })
+                        .SetSeries(new Series { Name = sensorsList[(value - 1).Value].Name, Data = new Data(data) });
+                    }
+                }
                 return View(sensorsList[(value - 1).Value]);
             }
             else
@@ -99,14 +137,17 @@ namespace WebApp.Controllers
                         DateTime _dateTime = new DateTime(_date.Year, _date.Month, _date.Day, _time.Hour, _time.Minute, _time.Second);
 
                         sensorsList[i].Measurments.Add(new Models.Measurement { Temperature = _temperature, Date = _dateTime });
+                        sensorsList[i].Days.Add(_dateTime.Date);
                     }
                     dataReader.Close();
+                    sensorsList[i].Days = sensorsList[i].Days.Distinct().ToList();
                 }
                 DataBase.Connection.Close();
 
                 sensorsList.Add(new Models.SensorHistory());
 
                 ViewBag.List = new SelectList(sensorsList, "Id", "Name");
+                ViewBag.Day = new SelectList(sensorsList.Last().Measurments, null, "Date");
 
                 return View(sensorsList.Last());
             }

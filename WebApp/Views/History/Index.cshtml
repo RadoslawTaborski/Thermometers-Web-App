@@ -10,7 +10,26 @@
 
 @model WebApp.Models.SensorHistory
 
-@Html.DropDownList("List", null, "wybierz czujnik", new { @onchange = "document.location.href='/History/Index?value='+this.value;" })
+<!--@Html.DropDownList("List", null, "wybierz czujnik", new { @onchange = "document.location.href='/History/Index?value='+this.value;" })
+@Html.DropDownList("Day", null, "wybierz czujnik", new { @onchange = "document.location.href='/History/Index?value='+this.value;" }) -->
+
+@Html.DropDownList("List", null, "wybierz czujnik")
+@Html.DropDownList("Day", null, "cały okres")
+
+<script src="~/Scripts/jquery-1.9.1.js"></script>
+<script>
+        $(function () {
+            $('#List').change(function(){
+                document.location.href = '/History/Index?value=' + $('#List').val() + '&date=' + $('#Day').val()
+            })
+        });
+        $(function () {
+            $('#Day').change(function () {
+                document.location.href = '/History/Index?value=' + $('#List').val() + '&date=' + $('#Day').val()
+            })
+        });
+</script>
+
 
 @(Model.Chart)
 
@@ -19,11 +38,11 @@
         <th width="100">Data</th>
         <th width="100">Pomiar</th>
     </tr>
-    @for (int i = Model.Measurments.Count - 1; i >= 0; --i)
+    @for (int i = Model.Data.Count() - 1; i >= 0; --i)
     {
         <tr>
-            <td>@Html.DisplayFor(m => m.Measurments[i].Date)</td>
-            <td>@Html.DisplayFor(m => m.Measurments[i].Temperature) <sup>o</sup>C</td>
+            <td>@Html.DisplayFor(m => m.Data.ElementAt(i).Date)</td>
+            <td>@Html.DisplayFor(m => m.Data.ElementAt(i).Temperature) <sup>o</sup>C</td>
         </tr>
     }
 </table>
