@@ -12,3 +12,7 @@ D:\PWr\Semestr_VII\Projekt specjalnościowy\ConfigurationApp\CunfugurationApp\Cu
 D:\PWr\Semestr_VII\Projekt specjalnościowy\ConfigurationApp\CunfugurationApp\CunfugurationApp\bin\Debug\ConfigurationApp.pdb
 D:\PWr\Semestr_VII\Projekt specjalnościowy\ConfigurationApp\CunfugurationApp\CunfugurationApp\bin\Debug\MySql.Data.dll
 D:\PWr\Semestr_VII\Projekt specjalnościowy\ConfigurationApp\CunfugurationApp\CunfugurationApp\obj\Debug\ConfigurationApp.csprojResolveAssemblyReference.cache
+D:\PWr\Semestr_VII\Projekt specjalnościowy\ConfigurationApp\CunfugurationApp\CunfugurationApp\bin\Debug\ConfigurationApp.exe.manifest
+D:\PWr\Semestr_VII\Projekt specjalnościowy\ConfigurationApp\CunfugurationApp\CunfugurationApp\bin\Debug\ConfigurationApp.application
+D:\PWr\Semestr_VII\Projekt specjalnościowy\ConfigurationApp\CunfugurationApp\CunfugurationApp\obj\Debug\ConfigurationApp.exe.manifest
+D:\PWr\Semestr_VII\Projekt specjalnościowy\ConfigurationApp\CunfugurationApp\CunfugurationApp\obj\Debug\ConfigurationApp.application

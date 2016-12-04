@@ -62,7 +62,7 @@ namespace WebApp.Controllers
                     DateTime date2;
                     if (DateTime.TryParseExact(date, "dd'.'MM'.'yyyy", null, System.Globalization.DateTimeStyles.None, out date2))
                     {
-                        var tmp=sensorsList[(value - 1).Value].Data = sensorsList[(value - 1).Value].Measurments.Where(p=> sensorsList[(value - 1).Value].Measurments.Any(i => i.Date.Date == date2.Date));
+                        var tmp=sensorsList[(value - 1).Value].Data = sensorsList[(value - 1).Value].Measurments.Where(i => i.Date.Date == date2.Date);
 
                         var data = new object[tmp.Count(), 2];
                         for (var i = 0; i < tmp.Count(); ++i)
