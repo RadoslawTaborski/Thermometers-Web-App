@@ -10,11 +10,15 @@
 
 @model WebApp.Models.Chart
 
-<!--@Html.DropDownList("List", null, "wybierz czujnik", new { @onchange = "document.location.href='/History/Index?value='+this.value;" })
-@Html.DropDownList("Day", null, "wybierz czujnik", new { @onchange = "document.location.href='/History/Index?value='+this.value;" }) -->
+@Html.DropDownList("List", null, "wybierz czujnik", new
+{
+    style = "font-size:150%",
+})
 
-@Html.DropDownList("List", null, "wybierz czujnik")
-@Html.DropDownList("Day", null, "cały okres")
+@Html.DropDownList("Day", null, "cały okres", new
+{
+    style = "font-size:150%",
+})
 
 <script src="~/Scripts/jquery-1.9.1.js"></script>
 <script>
