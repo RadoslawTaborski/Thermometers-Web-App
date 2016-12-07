@@ -16,6 +16,7 @@ namespace WebApp.Controllers
     public class HistoryController : Controller
     {
         private static List<Models.SensorHistory> sensorsList;
+        private Models.Chart chart=new Models.Chart();
         // GET: History
         public ActionResult Index(int? value, String date)
         {
@@ -30,7 +31,7 @@ namespace WebApp.Controllers
                 ViewBag.Day = new SelectList(DaysString,date);
                 if (date == "")
                 {
-                    var tmp=sensorsList[(value - 1).Value].Data = sensorsList[(value - 1).Value].Measurments;
+                    var tmp=chart.Data = sensorsList[(value - 1).Value].Measurments;
                     var data = new object[tmp.Count(), 2];
                     for (var i = 0; i < tmp.Count(); ++i)
                     {
@@ -38,7 +39,7 @@ namespace WebApp.Controllers
                         data[i, 1] = tmp.ElementAt(i).Temperature;
                     }
 
-                    sensorsList[(value - 1).Value].Chart = new Highcharts("chart")
+                    chart.Highchart = new Highcharts("chart")
                     .InitChart(new Chart { DefaultSeriesType = ChartTypes.Spline })
                     .SetOptions(new GlobalOptions { Global = new Global { UseUTC = false } })
                     .SetTitle(new Title { Text = "Wykres" })
@@ -62,7 +63,7 @@ namespace WebApp.Controllers
                     DateTime date2;
                     if (DateTime.TryParseExact(date, "dd'.'MM'.'yyyy", null, System.Globalization.DateTimeStyles.None, out date2))
                     {
-                        var tmp=sensorsList[(value - 1).Value].Data = sensorsList[(value - 1).Value].Measurments.Where(i => i.Date.Date == date2.Date);
+                        var tmp=chart.Data = sensorsList[(value - 1).Value].Measurments.Where(i => i.Date.Date == date2.Date);
 
                         var data = new object[tmp.Count(), 2];
                         for (var i = 0; i < tmp.Count(); ++i)
@@ -71,7 +72,7 @@ namespace WebApp.Controllers
                             data[i, 1] = tmp.ElementAt(i).Temperature;
                         }
 
-                        sensorsList[(value - 1).Value].Chart = new Highcharts("chart")
+                        chart.Highchart = new Highcharts("chart")
                         .InitChart(new Chart { DefaultSeriesType = ChartTypes.Spline })
                         .SetOptions(new GlobalOptions { Global = new Global { UseUTC = false } })
                         .SetTitle(new Title { Text = "Wykres" })
@@ -91,7 +92,7 @@ namespace WebApp.Controllers
                         .SetSeries(new Series { Name = sensorsList[(value - 1).Value].Name, Data = new Data(data) });
                     }
                 }
-                return View(sensorsList[(value - 1).Value]);
+                return View(chart);
             }
             else
             {
@@ -149,7 +150,7 @@ namespace WebApp.Controllers
                 ViewBag.List = new SelectList(sensorsList, "Id", "Name");
                 ViewBag.Day = new SelectList(sensorsList.Last().Measurments, null, "Date");
 
-                return View(sensorsList.Last());
+                return View(chart);
             }
         }
     }

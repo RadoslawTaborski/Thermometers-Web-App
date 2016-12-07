@@ -8,7 +8,7 @@
 </div>
 
 
-@model WebApp.Models.SensorHistory
+@model WebApp.Models.Chart
 
 <!--@Html.DropDownList("List", null, "wybierz czujnik", new { @onchange = "document.location.href='/History/Index?value='+this.value;" })
 @Html.DropDownList("Day", null, "wybierz czujnik", new { @onchange = "document.location.href='/History/Index?value='+this.value;" }) -->
@@ -31,7 +31,7 @@
 </script>
 
 
-@(Model.Chart)
+@(Model.Highchart)
 
 <table id="aliasTable" class="table text-left" width="250">
     <tr>
