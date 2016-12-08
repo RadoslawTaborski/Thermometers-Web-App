@@ -145,10 +145,10 @@ namespace WebApp.Controllers
                 }
                 DataBase.Connection.Close();
 
-                sensorsList.Add(new Models.SensorHistory());
+                //sensorsList.Add(new Models.SensorHistory());
 
                 ViewBag.List = new SelectList(sensorsList, "Id", "Name");
-                ViewBag.Day = new SelectList(sensorsList.Last().Measurments, null, "Date");
+                ViewBag.Day = new SelectList(new List<Models.Measurement>(), null, "Date");
 
                 return View(chart);
             }
